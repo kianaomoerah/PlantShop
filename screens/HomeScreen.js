@@ -1,8 +1,8 @@
-import { PLANTS } from '../data/plant-data';
+import PlantList from "../components/PlantList";
 
 function HomeScreen() {
+  return <PlantList />
 
-  return <PlantList items={PLANTS} />
 }
 
 export default HomeScreen
