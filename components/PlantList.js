@@ -1,27 +1,27 @@
 import { View, FlatList } from "react-native";
 
-function PlantList({items}) { 
+function PlantList({plants}) { 
 
-  function renderPlantItem(itemData) {
-    const item = itemData.item
+  function renderPlantItem(plantData) {
+    const plant = plantData.plant
     const plantItemProps = {
-      id: item.id,
-      name: item.name,
-      imageUrl: item.imageUrl,
-      price: item.price,
-      bio: item.bio,
-      sunInstructions: item.sunInstructions,
-      waterInstructions: item.waterInstructions
+      id: plant.id,
+      name: plant.name,
+      imageUrl: plant.imageUrl,
+      price: plant.price,
+      bio: plant.bio,
+      sunInstructions: plant.sunInstructions,
+      waterInstructions: plant.waterInstructions
     }
 
-    // return individual plant component
+    return <PlantItem {...plantItemProps}/>
   }
 
   return (
     <View>
       <FlatList 
-        data={items}
-        keyExtractor={(item) => item.id}
+        data={plants}
+        keyExtractor={(plant) => plant.id}
         renderItem={renderPlantItem}
       />
     </View>
