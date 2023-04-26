@@ -1,9 +1,8 @@
-import { Text } from 'react-native'
+import { PLANTS } from '../data/plant-data';
 
 function HomeScreen() {
-  return (
-    <Text> Home Screen</Text>
-  )
+
+  return <PlantList items={PLANTS} />
 }
 
 export default HomeScreen
