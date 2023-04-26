@@ -6,8 +6,7 @@ class Plant {
     price,
     bio,
     sunInstructions,
-    waterInstructions,
-
+    waterInstructions
   ) {
     this.id = id;
     this.name = name;
