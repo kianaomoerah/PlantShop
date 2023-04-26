@@ -72,16 +72,6 @@ export const PLANTS = [
   ),
 
   new Plant(
-    '007',
-    'ZZ Plant',
-    'https://images.unsplash.com/photo-1632900931937-f5ea0b69da81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-    20,
-    'Not only is this plant an effective air cleaner, it is also quite probably the hardest indoor plant to kill. An excellent choice for new plant parents',
-    'indirect light',
-    'every 2 - 4 weeks'
-  ),
-
-  new Plant(
     '008',
     'Rubber Plant',
     'https://images.unsplash.com/photo-1630403607762-4379752b7ad9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
