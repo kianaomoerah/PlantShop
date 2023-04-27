@@ -1,9 +1,12 @@
-import { View, FlatList } from "react-native";
+import { PLANTS } from "../data/plant-data";
+import { View, FlatList, StyleSheet } from "react-native";
+import PlantItem from "./PlantItem";
 
-function PlantList({plants}) { 
+function PlantList() { 
 
-  function renderPlantItem(plantData) {
-    const plant = plantData.plant
+  function renderPlantItem(itemData) {
+
+    const plant = itemData.item
     const plantItemProps = {
       id: plant.id,
       name: plant.name,
@@ -14,18 +17,28 @@ function PlantList({plants}) {
       waterInstructions: plant.waterInstructions
     }
 
-    return <PlantItem {...plantItemProps}/>
+    return <PlantItem {...plantItemProps} />;
+    
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       <FlatList 
-        data={plants}
+        data={PLANTS}
         keyExtractor={(plant) => plant.id}
         renderItem={renderPlantItem}
+        numColumns={2}
+        columnWrapperStyle={{justifyContent: 'space-around'}}
+
       />
     </View>
   )
 }
 
 export default PlantList;
+
+const styles = StyleSheet.create({
+    container: {
+        padding: 16
+    }
+})
