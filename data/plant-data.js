@@ -4,7 +4,7 @@ export const PLANTS = [
   new Plant(
     '001',
     'Snake Plant',
-    'https://images.unsplash.com/photo-1646667687331-e06974a7fda2ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8auto=format&fit=crop&w=464&q=80',
+    'https://images.unsplash.com/photo-1646667687331-e06974a7fda2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',
     30,
     'The Snake plant will put up with quite a high level of neglect anda wide spectrum of care, making it a great starter plant',
     'bright direct light to moderate shade',
