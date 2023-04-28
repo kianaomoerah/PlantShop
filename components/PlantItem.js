@@ -1,29 +1,26 @@
-import { Pressable, View, Image, Text, Button, StyleSheet,  } from 'react-native';
+import { Pressable, View, Image, Text, StyleSheet,  } from 'react-native';
+import IconButton from './IconButton';
 
 function PlantItem({id, name, image, price, bio, sunInstructions, waterInstructions }) {
+
+  function addCart() {
+    // add item to cart
+  }
 
   return (
     <Pressable>
       <View style={styles.plantCard}>
-        <Image source={image} style={styles.image}/>
+        <View style={styles.imageContainer}>
+          <Image source={image} style={styles.image}/>
+        </View>
         <Text style={styles.name}>{name}</Text>
         <View style={styles.innerContainer}>
           <Text style={styles.price}>${price}.00</Text>
-          <View
-              style={{
-                height: 25,
-                width: 25,
-                backgroundColor: 'black',
-                borderRadius: 5,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <Text
-                style={{fontSize: 22, color: 'white', fontWeight: 'bold'}}>
-                +
-              </Text>
-            </View>
-          {/* <Button>'+'</Button> */}
+          <IconButton 
+            onPress={addCart}
+            icon={'add-circle'}
+            color={'#5CA904'}
+          />
         </View>
 
       </View>
@@ -33,34 +30,38 @@ function PlantItem({id, name, image, price, bio, sunInstructions, waterInstructi
 
 const styles = StyleSheet.create({
   plantCard: {
-    backgroundColor: '#B2AC88',
+    backgroundColor: '#F1F1F1',
     width: 150,
     height: 250,
     marginHorizontal: 2,
     marginBottom: 20,
     borderRadius: 10
   },
+  imageContainer: {
+    flex: 1,
+  },
   image: {
-    height: 150,
     width: 150,
+    resizeMode: 'cover',
     borderTopRightRadius: 10,
-    borderTopLeftRadius: 10
+    borderTopLeftRadius: 10,
+    flex: 1
   },
   price: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold'
   },
   name: {
     fontWeight: 'bold',
     fontSize: 17,
-    marginTop: 10,
+    marginVertical: 10,
     textAlign: 'center'
   },
   innerContainer:{
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'flex-end',
-    marginTop: 5
+    marginBottom: 10
   }
 })
 
