@@ -2,7 +2,7 @@ class Plant {
   constructor(
     id,
     name,
-    imageUrl,
+    image,
     price,
     bio,
     sunInstructions,
@@ -10,7 +10,7 @@ class Plant {
   ) {
     this.id = id;
     this.name = name;
-    this.imageUrl = imageUrl;
+    this.image = image;
     this.price = price;
     this.bio = bio;
     this.sunInstructions = sunInstructions;

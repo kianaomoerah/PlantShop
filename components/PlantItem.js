@@ -1,11 +1,11 @@
 import { Pressable, View, Image, Text, Button, StyleSheet,  } from 'react-native';
 
-function PlantItem({id, name, imageUrl, price, bio, sunInstructions, waterInstructions }) {
+function PlantItem({id, name, image, price, bio, sunInstructions, waterInstructions }) {
 
   return (
     <Pressable>
       <View style={styles.plantCard}>
-        <Image source={{uri: imageUrl}} style={styles.image}/>
+        <Image source={image} style={styles.image}/>
         <Text style={styles.name}>{name}</Text>
         <View style={styles.innerContainer}>
           <Text style={styles.price}>${price}.00</Text>
