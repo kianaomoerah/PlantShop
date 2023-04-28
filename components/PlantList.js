@@ -10,7 +10,7 @@ function PlantList() {
     const plantItemProps = {
       id: plant.id,
       name: plant.name,
-      imageUrl: plant.imageUrl,
+      image: plant.image,
       price: plant.price,
       bio: plant.bio,
       sunInstructions: plant.sunInstructions,
