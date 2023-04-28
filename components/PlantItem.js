@@ -3,28 +3,38 @@ import IconButton from './IconButton';
 
 function PlantItem({id, name, image, price, bio, sunInstructions, waterInstructions }) {
 
+  function plantDetailHandler() {
+    // navigate to plant detail page
+  }
+
   function addCart() {
     // add item to cart
   }
 
   return (
-    <Pressable>
-      <View style={styles.plantCard}>
-        <View style={styles.imageContainer}>
-          <Image source={image} style={styles.image}/>
+    <View>
+      <Pressable
+        androoid_ripple={{ color: '#CCC'}}
+        style={({pressed}) => pressed ? styles.pressed : null}
+        onPress={plantDetailHandler}
+      >
+        <View style={styles.plantCard}>
+          <View style={styles.imageContainer}>
+            <Image source={image} style={styles.image}/>
+          </View>
+          <Text style={styles.name}>{name}</Text>
+          <View style={styles.innerContainer}>
+            <Text style={styles.price}>${price}.00</Text>
+            <IconButton 
+              onPress={addCart}
+              icon={'add-circle'}
+              // todo: why isn't bad plus working?
+              color={'#5CA904'}
+            />
+          </View>
         </View>
-        <Text style={styles.name}>{name}</Text>
-        <View style={styles.innerContainer}>
-          <Text style={styles.price}>${price}.00</Text>
-          <IconButton 
-            onPress={addCart}
-            icon={'add-circle'}
-            color={'#5CA904'}
-          />
-        </View>
-
-      </View>
-    </Pressable> 
+      </Pressable> 
+    </View>
   )
 }
 
@@ -62,6 +72,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'flex-end',
     marginBottom: 10
+  },
+  pressed: {
+    opacity: 0.5
   }
 })
 
