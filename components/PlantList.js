@@ -1,5 +1,5 @@
 import { PLANTS } from "../data/plant-data";
-import { View, FlatList, StyleSheet } from "react-native";
+import { View, FlatList, StyleSheet, Text } from "react-native";
 import PlantItem from "./PlantItem";
 
 function PlantList() { 
@@ -29,6 +29,8 @@ function PlantList() {
         renderItem={renderPlantItem}
         numColumns={2}
         columnWrapperStyle={{justifyContent: 'space-around'}}
+        // to do: create header and footer component
+        ListHeaderComponent={<Text>Welcome!</Text>}
 
       />
     </View>
