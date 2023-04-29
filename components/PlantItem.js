@@ -1,13 +1,18 @@
 import { Pressable, View, Image, Text, StyleSheet,  } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import IconButton from './IconButton';
 
-function PlantItem({id, name, image, price, bio, sunInstructions, waterInstructions }) {
+function PlantItem({id, name, image, price }) {
+
+  const navigation = useNavigation();
 
   function plantDetailHandler() {
-    // navigate to plant detail page
+    navigation.navigate('PlantDetails', {
+      plantId: id
+    })
   }
 
-  function addCart() {
+  function addToCart() {
     // add item to cart
   }
 
@@ -24,11 +29,11 @@ function PlantItem({id, name, image, price, bio, sunInstructions, waterInstructi
           </View>
           <Text style={styles.name}>{name}</Text>
           <View style={styles.innerContainer}>
-            <Text style={styles.price}>${price}.00</Text>
+            <Text style={styles.price}>$ {price}.00</Text>
             <IconButton 
-              onPress={addCart}
+              onPress={addToCart}
               icon={'add-circle'}
-              // todo: why isn't bad plus working?
+              // todo: why isn't bags plus working?
               color={'#5CA904'}
             />
           </View>
