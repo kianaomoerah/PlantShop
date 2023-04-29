@@ -6,9 +6,9 @@ export const PLANTS = [
     'Snake Plant',
     require('../assets/photos/snake-plant.png'),
     30,
-    'The Snake plant will put up with quite a high level of neglect anda wide spectrum of care, making it a great starter plant',
+    'The Snake plant will put up with quite a high level of neglect and a wide spectrum of care, making it a great starter plant.',
     'bright direct light to moderate shade',
-    'every 2 - 4 weeks'
+    '2 - 4 weeks'
   ),
 
   new Plant(
@@ -36,7 +36,7 @@ export const PLANTS = [
     'Heartleaf Brasil',
     require('../assets/photos/heartleaf-brasil.png'),
     20,
-    'With foliage that appears painted with the colours of the Brazilian flag, and some seriously low-maintenace vibes, this is a great houseplant for even the most novice of plant parents ',
+    'With foliage that appears painted with the colours of the Brazilian flag, and some seriously low-maintenace vibes, this is a great houseplant for even the most novice of plant parents.',
     'bright indirect light',
     'every 1 - 2 weeks'
   ),
@@ -46,7 +46,7 @@ export const PLANTS = [
     'Banana Tree',
     require('../assets/photos/banana-plant.png'),
     20,
-    'With foliage that appears painted with the colours of the Brazilian flag, and some seriously low-maintenace vibes, this is a great houseplant for even the most novice of plant parents ',
+    'With foliage that appears painted with the colours of the Brazilian flag, and some seriously low-maintenace vibes, this is a great houseplant for even the most novice of plant parents. ',
     'bright direct light',
     'every 3 - 5 days'
   ),
@@ -66,7 +66,7 @@ export const PLANTS = [
     'ZZ Plant',
     require('../assets/photos/zz-plant.png'),
     20,
-    'Not only is this plant an effective air cleaner, it is also quite probably the hardest indoor plant to kill. An excellent choice for new plant parents',
+    'Not only is this plant an effective air cleaner, it is also quite probably the hardest indoor plant to kill. An excellent choice for new plant parents.',
     'indirect light',
     'every 2 - 4 weeks'
   ),
@@ -76,7 +76,7 @@ export const PLANTS = [
     'Rubber Plant',
     require('../assets/photos/rubber-plant.png'),
     30,
-    'A long fan favourite, the Rubber Plant is adored for it\'s ease of care, large and attractive glossy leaves, and it\'s potential mature size (10ft)',
+    'A long fan favourite, the Rubber Plant is adored for it\'s ease of care, large and attractive glossy leaves, and it\'s potential mature size (10ft).',
     'indirect light',
     'every 1 - 2 weeks'
   ),
