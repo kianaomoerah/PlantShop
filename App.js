@@ -60,7 +60,7 @@ export default function App() {
       name="PlantDetails"
       component={PlantDetailScreen}
       options={{
-        title: 'About Your Plant',
+        title: 'Meet Your Plant!',
         headerRight: () => {
           return (
             <IconButton 
