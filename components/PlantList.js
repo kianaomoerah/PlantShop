@@ -29,7 +29,7 @@ function PlantList() {
         keyExtractor={(plant) => plant.id}
         renderItem={renderPlantItem}
         numColumns={2}
-        columnWrapperStyle={{justifyContent: 'space-around'}}
+        columnWrapperStyle={{justifyContent: 'space-evenly'}}
         // to do: create header and footer component
         ListHeaderComponent={<HomeHeader />}
 
