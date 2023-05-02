@@ -18,7 +18,6 @@ function PlantItem({id, name, image, price }) {
   }
 
   return (
-    <View>
       <Pressable
         android_ripple={{ color: '#CCC'}}
         style={({pressed}) => pressed ? styles.pressed : null}
@@ -40,7 +39,6 @@ function PlantItem({id, name, image, price }) {
           </View>
         </View>
       </Pressable> 
-    </View>
   )
 }
 
