@@ -60,7 +60,16 @@ export default function App() {
       name="PlantDetails"
       component={PlantDetailScreen}
       options={{
-        title: 'About Your Plant'
+        title: 'About Your Plant',
+        headerRight: () => {
+          return (
+            <IconButton 
+            onPress={ () => {navigation.navigate('Cart')}}
+            icon={'cart'}
+            color={COLORS.darkGreen}
+            />
+          )
+        }
       }}
       />
     </Stack.Navigator>
