@@ -2,6 +2,7 @@ import { PLANTS } from '../data/plant-data';
 import { ScrollView, Image, View, Text, StyleSheet } from 'react-native';
 import { useLayoutEffect } from 'react';
 import Button from '../components/Button';
+import COLORS from '../constants/colors';
 
 
 function PlantDetailScreen({ route, navigation}) {
@@ -29,35 +30,33 @@ function PlantDetailScreen({ route, navigation}) {
 
   return ( 
     // todo: header will feature cart icon (lead to cart page) and back button, and name of plant as title
+    // add details component that this screen will render
   <ScrollView>
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image source={selectedPlant.image} style={styles.image}/>
-      </View>
-      <View style={styles.detailsContainer}>
-      <View style={styles.costContainer}>
-        <Text style={styles.name}>{selectedPlant.name}</Text>
-        <View style={styles.priceContainer}>
-          <Text style={styles.price}>$ {selectedPlant.price}.00</Text>
-        </View>
-      </View>
-      <View style={styles.bioContainer}>
-        <Text style={styles.about}>About</Text>
-        <Text style={styles.bio}>{selectedPlant.bio}</Text>
-      </View>
-      <View>
-        <View style={styles.careContainer}>
-          <View style={styles.careInstruction}>
-            <Text style={styles.careText}>☀️ {selectedPlant.sunInstructions}</Text>
-          </View>
-          <View style={styles.careInstruction}>
-            <Text style={styles.careText}>💧 {selectedPlant.waterInstructions}</Text>
-          </View>
-        </View>
-      </View>
-      <Button onPress={addToCart} color={'#5CA904'} alignment={'flex-end'}>Add to Cart</Button>
-        {/* consider reusable pill button */}
+    <View style={styles.imageContainer}>
+      <Image source={selectedPlant.image} style={styles.image}/>
     </View>
+    <View style={styles.detailsContainer}>
+    <View style={styles.costContainer}>
+      <Text style={styles.name}>{selectedPlant.name}</Text>
+      <View style={styles.priceContainer}>
+        <Text style={styles.price}>$ {selectedPlant.price}.00</Text>
+      </View>
+    </View>
+    <View style={styles.bioContainer}>
+      <Text style={styles.about}>About</Text>
+      <Text style={styles.bio}>{selectedPlant.bio}</Text>
+    </View>
+    <View>
+      <View style={styles.careContainer}>
+        <View style={styles.careInstruction}>
+          <Text style={styles.careText}>☀️ {selectedPlant.sunInstructions}</Text>
+        </View>
+        <View style={styles.careInstruction}>
+          <Text style={styles.careText}>💧 {selectedPlant.waterInstructions}</Text>
+        </View>
+      </View>
+    </View>
+    <Button onPress={addToCart} color={COLORS.lightGreen} alignment={'flex-end'}>Add to Cart</Button>
     </View>
   </ScrollView>
   )
@@ -66,15 +65,11 @@ function PlantDetailScreen({ route, navigation}) {
 export default PlantDetailScreen;
 
 const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    justifyContent: 'space-between'
-  },
   imageContainer: {
     // flex: 0.45,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white'
+    backgroundColor: COLORS.white,
   },
   image: {
     resizeMode: 'contain',
@@ -83,12 +78,14 @@ const styles = StyleSheet.create({
   },
   detailsContainer: {
     // flex: 0.55,
-    backgroundColor: '#F1F1F1',
-    marginHorizontal: 7,
-    marginBottom: 7,
-    marginTop: 15,
+    // backgroundColor: '#F1F1F1',
+    // flex: 1,
+    backgroundColor: COLORS.lightBeige,
+    // marginHorizontal: 7,
+    // marginBottom: 7,
+    // marginTop: 15,
     borderRadius: 20,
-    borderTopColor: 'red'
+    // marginBottom: 20
   },
   costContainer: {
     marginLeft: 20,
@@ -102,7 +99,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   priceContainer: {
-    backgroundColor: '#5CA904',
+    backgroundColor: COLORS.lightGreen,
     width: 80,
     height: 40,
     justifyContent: 'center',
@@ -111,7 +108,7 @@ const styles = StyleSheet.create({
   },
   price: {
     marginLeft: 15,
-    color: 'white',
+    color: COLORS.white,
     fontWeight: 'bold',
     fontSize: 16
   },
@@ -124,7 +121,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   bio: {
-    color: 'grey',
+    color: COLORS.black,
     fontSize: 16,
     lineHeight: 22,
     marginTop: 10
@@ -135,7 +132,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   careInstruction: {
-    backgroundColor: '#5CA904',
+    backgroundColor: COLORS.darkGreen,
     marginVertical: 5,
     paddingVertical: 10,
     paddingHorizontal: 10,
@@ -144,7 +141,7 @@ const styles = StyleSheet.create({
     // width: '100%'
   },
   careText: {
-    color: 'white',
+    color: COLORS.white,
     fontWeight: 'bold',
     fontSize: 16,
     // textAlign: 'left'

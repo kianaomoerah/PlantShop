@@ -1,4 +1,5 @@
-import { Pressable, View, Text, StyleSheet } from 'react-native'
+import { Pressable, View, Text, StyleSheet } from 'react-native';
+import COLORS from '../constants/colors';
 
 function Button({color, alignment, children, onPress}) {
   return (
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
     // alignSelf: 'center'
   },
   buttonText: {
-    color: 'white',
+    color: COLORS.white,
     textAlign: 'center',
     fontWeight: 'bold'
   },

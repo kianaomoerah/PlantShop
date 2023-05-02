@@ -1,6 +1,7 @@
 import { PLANTS } from "../data/plant-data";
 import { View, FlatList, StyleSheet, Text } from "react-native";
 import PlantItem from "./PlantItem";
+import HomeHeader from "./HomeHeader";
 
 function PlantList() { 
 
@@ -22,7 +23,7 @@ function PlantList() {
   }
 
   return (
-    <View style={styles.container}>
+    <View>
       <FlatList 
         data={PLANTS}
         keyExtractor={(plant) => plant.id}
@@ -30,7 +31,7 @@ function PlantList() {
         numColumns={2}
         columnWrapperStyle={{justifyContent: 'space-around'}}
         // to do: create header and footer component
-        ListHeaderComponent={<Text>Welcome!</Text>}
+        ListHeaderComponent={<HomeHeader />}
 
       />
     </View>
@@ -38,9 +39,3 @@ function PlantList() {
 }
 
 export default PlantList;
-
-const styles = StyleSheet.create({
-    container: {
-        padding: 16
-    }
-})

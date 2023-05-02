@@ -1,6 +1,7 @@
 import { Pressable, View, Image, Text, StyleSheet,  } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import IconButton from './IconButton';
+import COLORS from '../constants/colors';
 
 function PlantItem({id, name, image, price }) {
 
@@ -19,7 +20,7 @@ function PlantItem({id, name, image, price }) {
   return (
     <View>
       <Pressable
-        androoid_ripple={{ color: '#CCC'}}
+        android_ripple={{ color: '#CCC'}}
         style={({pressed}) => pressed ? styles.pressed : null}
         onPress={plantDetailHandler}
       >
@@ -34,7 +35,7 @@ function PlantItem({id, name, image, price }) {
               onPress={addToCart}
               icon={'add-circle'}
               // todo: why isn't bags plus working?
-              color={'#5CA904'}
+              color={COLORS.lightGreen}
             />
           </View>
         </View>
@@ -45,10 +46,15 @@ function PlantItem({id, name, image, price }) {
 
 const styles = StyleSheet.create({
   plantCard: {
-    backgroundColor: '#F1F1F1',
+    // backgroundColor: '#F1F1F1',
+    // backgroundColor: 'rgba(158, 231, 127, .20)',
+    // backgroundColor: 'rgba(156, 175, 136, .35)',
+    backgroundColor: COLORS.lightBeige,
+
+      // 158, 231, 151, .35
     width: 150,
     height: 250,
-    marginHorizontal: 2,
+    // marginHorizontal: 2,
     marginBottom: 20,
     borderRadius: 10
   },
@@ -64,7 +70,8 @@ const styles = StyleSheet.create({
   },
   price: {
     fontSize: 18,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    marginBottom: 5
   },
   name: {
     fontWeight: 'bold',
