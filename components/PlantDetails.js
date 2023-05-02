@@ -1,4 +1,4 @@
-import { ScrollView, Image, View, Text, StyleSheet } from 'react-native';
+import { Image, View, Text, StyleSheet } from 'react-native';
 import Button from '../components/Button';
 import COLORS from '../constants/colors';
 
@@ -10,7 +10,7 @@ function PlantDetails({selectedPlant}) {
   }
 
   return (
-    <ScrollView>
+    <View style={styles.container} contentContainerStyle={{ justifyContent: 'space-between'}}>
       <View style={styles.imageContainer}>
         <Image source={selectedPlant.image} style={styles.image}/>
       </View>
@@ -35,17 +35,22 @@ function PlantDetails({selectedPlant}) {
           </View>
         </View>
       </View>
-      <Button onPress={addToCart} color={COLORS.lightGreen} alignment={'flex-end'}>Add to Cart</Button>
+      <Button onPress={addToCart} color={COLORS.white} alignment={'center'}>Add to Cart</Button>
       </View>
-    </ScrollView>
+    </View>
   )
 }
 
 export default PlantDetails;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.white,
+  },
   imageContainer: {
-    // flex: 0.45,
+    flex: 1,
+    marginTop: 20,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: COLORS.white,
@@ -56,15 +61,11 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   detailsContainer: {
-    // flex: 0.55,
-    // backgroundColor: '#F1F1F1',
-    // flex: 1,
+    flex: 1,
     backgroundColor: COLORS.lightBeige,
-    // marginHorizontal: 7,
-    // marginBottom: 7,
-    // marginTop: 15,
     borderRadius: 20,
-    // marginBottom: 20
+    paddingBottom: 35,
+    paddingTop: 5,
   },
   costContainer: {
     marginLeft: 20,
@@ -108,6 +109,7 @@ const styles = StyleSheet.create({
   careContainer: {
     paddingHorizontal: 20,
     marginTop: 20,
+    marginBottom: 15,
     alignItems: 'flex-start',
   },
   careInstruction: {
@@ -116,13 +118,10 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 25,
-    // height: '75%',
-    // width: '100%'
   },
   careText: {
     color: COLORS.white,
     fontWeight: 'bold',
     fontSize: 16,
-    // textAlign: 'left'
   }
 })
