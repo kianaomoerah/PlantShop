@@ -1,4 +1,4 @@
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import Cart from '../components/Cart';
 
 function CheckoutScreen() {
