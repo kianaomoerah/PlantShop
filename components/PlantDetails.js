@@ -1,13 +1,12 @@
 import { Image, View, Text, StyleSheet } from 'react-native';
+import { CartContext } from '../store/cart-context';
+import { useContext } from 'react';
 import Button from '../components/Button';
 import COLORS from '../constants/colors';
 
 function PlantDetails({selectedPlant}) {
 
-  function addToCart() {
-    // add item to cart
-    // todo: add to context
-  }
+  const cart = useContext(CartContext);
 
   return (
     <View style={styles.container} contentContainerStyle={{ justifyContent: 'space-between'}}>
@@ -35,7 +34,8 @@ function PlantDetails({selectedPlant}) {
           </View>
         </View>
       </View>
-      <Button onPress={addToCart} color={COLORS.white} alignment={'center'}>Add to Cart</Button>
+      {/* todo: simplify the object information passing */}
+      <Button onPress={() => cart.addItem(selectedPlant.id,selectedPlant.name, selectedPlant.image, selectedPlant.price)} color={COLORS.white} alignment={'center'}>Add to Cart</Button>
       </View>
     </View>
   )
