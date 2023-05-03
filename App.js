@@ -3,8 +3,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator} from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import CartProvider from './store/cart-context';
 import IconButton from './components/IconButton';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
 import CheckoutScreen from './screens/CheckoutScreen';
 import PlantDetailScreen from './screens/PlantDetailScreen';
@@ -45,34 +45,37 @@ function AppOverview() {
 
 export default function App() {
   return (
-  <NavigationContainer>
-    <StatusBar style="auto" />
-    <Stack.Navigator>
-      <Stack.Screen 
-      name="AppOverview" 
-      component={AppOverview}
-      options={{
-        headerShown: false,
-        contentStyle: { backgroundColor: '#fff'}
-      }}
-      />
-      <Stack.Screen 
-      name="PlantDetails"
-      component={PlantDetailScreen}
-      options={{
-        title: 'Meet Your Plant!',
+  <CartProvider>
+    <NavigationContainer>
+      <StatusBar style="auto" />
+      <Stack.Navigator screenOptions={({navigation}) => ({
         headerRight: () => {
-          return (
-            <IconButton 
-            onPress={ () => {navigation.navigate('Cart')}}
-            icon={'cart'}
-            color={COLORS.darkGreen}
-            />
-          )
-        }
-      }}
-      />
-    </Stack.Navigator>
-  </NavigationContainer>
+            return (
+              <IconButton 
+              onPress={ () => {navigation.navigate('Cart')}}
+              icon={'cart'}
+              color={COLORS.darkGreen}
+              />
+            )
+          }
+      })}>
+        <Stack.Screen 
+        name="AppOverview" 
+        component={AppOverview}
+        options={{
+          headerShown: false,
+          contentStyle: { backgroundColor: '#fff'}
+        }}
+        />
+        <Stack.Screen 
+        name="PlantDetails"
+        component={PlantDetailScreen}
+        options={{
+          title: 'Meet Your Plant!',
+        }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  </CartProvider>
   );
 }
