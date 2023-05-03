@@ -1,9 +1,10 @@
 import { SafeAreaView, Text } from 'react-native';
+import Cart from '../components/Cart';
 
 function CheckoutScreen() {
   return (
     <SafeAreaView>
-      <Text>Check out screen</Text>
+      <Cart />
     </SafeAreaView>
   )
 }
