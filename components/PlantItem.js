@@ -1,10 +1,14 @@
 import { Pressable, View, Image, Text, StyleSheet,  } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { CartContext } from '../store/cart-context';
+import { useContext } from 'react';
 import IconButton from './IconButton';
 import COLORS from '../constants/colors';
 
 function PlantItem({id, name, image, price }) {
 
+  const cart = useContext(CartContext);
+  // console.log(cart.items)
   const navigation = useNavigation();
 
   function plantDetailHandler() {
@@ -31,7 +35,7 @@ function PlantItem({id, name, image, price }) {
           <View style={styles.innerContainer}>
             <Text style={styles.price}>$ {price}.00</Text>
             <IconButton 
-              onPress={addToCart}
+              onPress={() => cart.addItem(id, name, image, price)}
               icon={'add-circle'}
               // todo: why isn't bags plus working?
               color={COLORS.lightGreen}
