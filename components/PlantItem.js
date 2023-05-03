@@ -17,10 +17,6 @@ function PlantItem({id, name, image, price }) {
     })
   }
 
-  function addToCart() {
-    // add item to cart
-  }
-
   return (
       <Pressable
         android_ripple={{ color: '#CCC'}}
@@ -48,15 +44,9 @@ function PlantItem({id, name, image, price }) {
 
 const styles = StyleSheet.create({
   plantCard: {
-    // backgroundColor: '#F1F1F1',
-    // backgroundColor: 'rgba(158, 231, 127, .20)',
-    // backgroundColor: 'rgba(156, 175, 136, .35)',
     backgroundColor: COLORS.lightBeige,
-
-      // 158, 231, 151, .35
     width: 150,
     height: 250,
-    // marginHorizontal: 2,
     marginBottom: 20,
     borderRadius: 10
   },
