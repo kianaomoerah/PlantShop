@@ -106,7 +106,7 @@ export const PLANTS = [
     'Marble Queen Pothos',
     require('../assets/photos/marble-queen-pothos.png'),
     20,
-    'Pothos are the perfect houseplant for beginners, being one of the easiest you can grow with a beautiful tropical vibe. The Marble Queen Pothos in particular has green leaves with cream splashes.',
+    'Pothos are one of the easiest houseplants for beginners. This Pothos in particular has beautiful variegation with cream splashes on the green leaves.',
     'indirect light',
     'every 1 - 2 weeks'
   ),
@@ -116,7 +116,7 @@ export const PLANTS = [
     'Spider Plant',
     require('../assets/photos/spider-plant.png'),
     10,
-    'The spider plant is incredibly easy to care for and to propagate (grow new plants from cuttings). Quite adaptable, this plant will grow in a wide range of conditions and suffers from very few problems.',
+    'The spider plant is incredibly easy to care for and to propagate. Quite adaptable, this plant will grow in a wide range of conditions and suffers from very few problems.',
     'indirect light',
     'every 1 - 2 weeks'
   )
