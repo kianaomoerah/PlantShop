@@ -41,17 +41,17 @@ function PlantCard({id, name, image, price }) {
 
 const styles = StyleSheet.create({
   plantCard: {
-    backgroundColor: COLORS.lightBeige,
     width: 150,
     height: 250,
     marginBottom: 20,
-    borderRadius: 10
+    borderRadius: 10,
+    backgroundColor: COLORS.lightBeige
   },
   imageContainer: {
     flex: 1,
   },
   image: {
-    width: 150,
+    width: '100%',
     resizeMode: 'cover',
     borderTopRightRadius: 10,
     borderTopLeftRadius: 10,

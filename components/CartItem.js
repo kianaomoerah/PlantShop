@@ -45,12 +45,14 @@ const styles = StyleSheet.create({
     marginVertical: 15
   },
   imageContainer: {
+    flex: 0.25,
+    height: 75,
     backgroundColor: COLORS.lightBeige,
     borderRadius: 10
   },
   image: {
-    width: 75,
-    height: 75,
+    width: '100%',
+    height: '100%',
     resizeMode: 'contain'
   },
   nameContainer: {
@@ -60,7 +62,6 @@ const styles = StyleSheet.create({
     flex: 0.35,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
-    width: 80
+    alignItems: 'center'
   }
 })
