@@ -25,13 +25,11 @@ function Cart() {
           <IconButton 
             onPress={() => cart.removeItem(itemData.item.id, itemData.item.name, itemData.item.image, itemData.item.price)}
             icon={'remove-circle'}
-            color={COLORS.lightGreen}
           />
             <Text>{itemData.item.quantity}</Text>
           <IconButton 
             onPress={() => cart.addItem(itemData.item.id, itemData.item.name, itemData.item.image, itemData.item.price)}
             icon={'add-circle'}
-            color={COLORS.lightGreen}
           />
         </View>
         <View>

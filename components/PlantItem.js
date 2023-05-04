@@ -34,7 +34,6 @@ function PlantItem({id, name, image, price }) {
               onPress={() => cart.addItem(id, name, image, price)}
               icon={'add-circle'}
               // todo: why isn't bags plus working?
-              color={COLORS.lightGreen}
             />
           </View>
         </View>

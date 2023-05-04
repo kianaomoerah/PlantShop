@@ -55,6 +55,7 @@ export default function App() {
               onPress={ () => {navigation.navigate('Cart')}}
               icon={'cart'}
               color={COLORS.darkGreen}
+              size={35}
               />
             )
           }
