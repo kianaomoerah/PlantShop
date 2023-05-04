@@ -60,16 +60,16 @@ export default function App() {
         <StatusBar style="auto" />
         <Stack.Navigator screenOptions={({navigation}) => ({
           headerRight: () => {
-              return (
-                <IconButton 
-                onPress={ () => {navigation.navigate('Cart')}}
-                icon={'cart'}
-                color={COLORS.darkGreen}
-                size={30}
-                />
+            return (
+              <IconButton 
+              onPress={ () => {navigation.navigate('Cart')}}
+              icon={'cart'}
+              color={COLORS.darkGreen}
+              size={30}
+              />
               )
             }
-        })}>
+          })}>
           <Stack.Screen 
           name="AppOverview" 
           component={AppOverview}
@@ -82,7 +82,7 @@ export default function App() {
           name="PlantDetails"
           component={PlantDetailScreen}
           options={{
-            title: 'Meet Your Plant!'
+            title: ''
           }}
           />
           <Stack.Screen 
