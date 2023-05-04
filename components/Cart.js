@@ -82,7 +82,8 @@ const styles = StyleSheet.create({
   },
   orderSummary: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    marginBottom: 10
   },
   totalText: {
     fontWeight: 'bold',

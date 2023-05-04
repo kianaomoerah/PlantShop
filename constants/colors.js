@@ -1,7 +1,7 @@
 export default COLORS = {
   white: '#fff',
   black: '#000',
-  grey: '#808080',
+  grey: '#BEBEBE',
   lightBeige: 'rgba(201, 185, 164, .25)',
   darkBeige: '#CCBDA8',
   lightGreen: '#5CA904',
