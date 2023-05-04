@@ -1,14 +1,14 @@
 import { Pressable, Text, StyleSheet } from 'react-native';
 import COLORS from '../constants/colors';
 
-function Button({ alignment, children, onPress }) {
+function Button({ primaryColor, secondaryColor, alignment, children, onPress }) {
   return (
 
       <Pressable 
         onPress={onPress} 
-        style={({pressed}) => [ {backgroundColor: pressed ? COLORS.lightGreen : COLORS.white}, {alignSelf: alignment}, styles.button, ]}>
+        style={({pressed}) => [ {backgroundColor: pressed ? secondaryColor : primaryColor}, {alignSelf: alignment}, styles.button, ]}>
          {({ pressed }) => (
-          <Text style={[{ color: pressed ? COLORS.white : COLORS.lightGreen }, styles.buttonText]}>{children}</Text>
+          <Text style={[{ color: pressed ? primaryColor : secondaryColor }, styles.buttonText]}>{children}</Text>
           )}
       </Pressable>
 
