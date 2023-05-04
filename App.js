@@ -56,7 +56,7 @@ export default function App() {
               onPress={ () => {navigation.navigate('Cart')}}
               icon={'cart'}
               color={COLORS.darkGreen}
-              size={35}
+              size={30}
               />
             )
           }
@@ -80,7 +80,7 @@ export default function App() {
         name="Cart"
         component={CheckoutScreen}
         options={{
-          title: 'Your Cart',
+          title: 'Your Cart'
         }}
         />
       </Stack.Navigator>

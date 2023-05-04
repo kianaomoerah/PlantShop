@@ -6,7 +6,8 @@ export const CartContext = createContext({
   addItem: (id) => {},
   removeItem: (id) => {},
   deleteCart: () => {},
-  getTotal: () => {}
+  getTotal: () => {},
+  getQuantityTotal: () => {}
 });
 
 export function CartProvider({children}) {
@@ -78,6 +79,16 @@ export function CartProvider({children}) {
     return totalCost
   }
 
+  function getQuantityTotal() {
+    let totalOrderQuantity = 0;
+    cartProducts.map((cartItem) => {
+      let totalItemQuantity = cartItem.quantity
+      totalOrderQuantity += totalItemQuantity
+    })
+
+    return totalOrderQuantity
+  }
+
   const contextValue = {
     items: cartProducts,
     getProductQuantity,
@@ -85,6 +96,7 @@ export function CartProvider({children}) {
     removeItem,
     deleteCart,
     getTotal,
+    getQuantityTotal
   }
 
 
