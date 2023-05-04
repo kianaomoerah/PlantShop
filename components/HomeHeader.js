@@ -10,7 +10,7 @@ function HomeHeader() {
       >
         <View style={styles.bannerTextContainer}>
           <Text style={[styles.title, styles.bannerText]}>The Resilient Planter</Text>
-          <Text style={[styles.subTitle, styles.bannerText]}>Easy-to-care for plants {'\n'} you're <Text style={styles.italic}>...unlikely...</Text> to kill</Text>
+          <Text style={[styles.subTitle, styles.bannerText]}>Easy-to-care for plants {'\n'} you're <Text style={styles.italic}>unlikely</Text> to kill</Text>
         </View>
       </ImageBackground>
       <View style={styles.about}>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 25,
     marginVertical: 20,
-    marginHorizontal: 15
+    marginHorizontal: 30
   },
   aboutText: {
     textAlign: 'center',
