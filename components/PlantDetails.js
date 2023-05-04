@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   imageContainer: {
-    flex: 1,
-    marginTop: 20,
+    flex: 0.5,
+    marginTop: 10,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: COLORS.white,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   detailsContainer: {
-    flex: 1,
+    flex: 0.55,
     backgroundColor: COLORS.lightBeige,
     borderRadius: 20,
     paddingBottom: 35,
