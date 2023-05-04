@@ -17,7 +17,6 @@ function AppOverview() {
   return (
     <BottomTabs.Navigator
       screenOptions={{
-        headerShown: false,
         tabBarColor: COLORS.white,
         tabBarStyle: { backgroundColor: COLORS.darkGreen},
         tabBarActiveTintColor: COLORS.white,
@@ -28,7 +27,8 @@ function AppOverview() {
       name="Shop"
       component={HomeScreen}
       options={{
-        tabBarIcon: ({color, size}) => <Ionicons name="leaf" size={36} color={COLORS.white}
+        headerShown: false,
+        tabBarIcon: () => <Ionicons name="leaf" size={36} color={COLORS.white}
      />
       }}
       />
@@ -36,7 +36,8 @@ function AppOverview() {
       name="Cart"
       component={CheckoutScreen}
       options={{
-        tabBarIcon: ({color, size}) => <Ionicons name="cart" size={36} color={COLORS.white} />
+        title: 'Your Cart',
+        tabBarIcon: () => <Ionicons name="cart" size={36} color={COLORS.white} />
       }}
       />
     </BottomTabs.Navigator>
@@ -72,7 +73,14 @@ export default function App() {
         name="PlantDetails"
         component={PlantDetailScreen}
         options={{
-          title: 'Meet Your Plant!',
+          title: 'Meet Your Plant!'
+        }}
+        />
+        <Stack.Screen 
+        name="Cart"
+        component={CheckoutScreen}
+        options={{
+          title: 'Your Cart',
         }}
         />
       </Stack.Navigator>
