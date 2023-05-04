@@ -1,9 +1,10 @@
-import { View, Text, FlatList, StyleSheet, SafeAreaView} from 'react-native';
+import { View, Text, FlatList, StyleSheet, SafeAreaView, Alert} from 'react-native';
 import Button from '../components/Button';
 import { CartContext } from '../store/cart-context';
 import { useContext } from 'react';
 import COLORS from '../constants/colors'
 import CartItem from './CartItem';
+
 
 function Cart() {
 
@@ -22,6 +23,11 @@ function Cart() {
     }
 
     return <CartItem {...cartItemProps}/>;
+  }
+
+  function completeOrder() {
+    cart.clearCart();
+    return Alert.alert('Your order has been submitted!')
   }
 
 
@@ -47,10 +53,11 @@ function Cart() {
         </View>
         <Button 
         style={styles.button}
-        // todo: is this the right design choice?
         primaryColor={COLORS.lightBeige} 
         secondaryColor={COLORS.lightGreen}
-        alignment={'center'}>Complete Order</Button>
+        alignment={'center'}
+        onPress={() => {completeOrder()}}
+        >Complete Order</Button>
       </View>
     </SafeAreaView>
   )
