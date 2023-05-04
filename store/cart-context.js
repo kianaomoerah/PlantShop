@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-import { PLANTS } from '../data/plant-data';
 
 export const CartContext = createContext({
   items: [],
@@ -30,6 +29,7 @@ export function CartProvider({children}) {
 
     if (quantity === 0) {
       // item does not exist in cart
+      // todo: clean-up, prop and value are the same
       setCartProducts([...cartProducts, {id: id, name: name, image: image, price: price, quantity: 1}])
     } else {
       // item exists in cart
@@ -38,7 +38,6 @@ export function CartProvider({children}) {
           product => product.id === id 
           ? {...product, quantity: product.quantity + 1}
           : product
-
         )
       )
     }
@@ -55,7 +54,6 @@ export function CartProvider({children}) {
           product => product.id === id 
           ? {...product, quantity: product.quantity - 1}
           : product
-
         )
       )
     }
@@ -69,11 +67,12 @@ export function CartProvider({children}) {
     )
   }
 
-  function getTotal(id) {
+  function getTotal() {
     let totalCost = 0;
+
     cartProducts.map((cartItem) => {
-      const productData = PLANTS.find(cartItem => cartItem.id === id);
-      totalCost += (productData.price * cartItem.quantity);
+      let totalItemPrice = (cartItem.price * cartItem.quantity)
+      totalCost += totalItemPrice
     });
 
     return totalCost
