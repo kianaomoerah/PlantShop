@@ -1,14 +1,14 @@
 import { PLANTS } from "../data/plant-data";
-import { View, FlatList, StyleSheet, Text } from "react-native";
-import PlantItem from "./PlantItem";
+import { View, FlatList } from "react-native";
+import PlantCard from "./PlantCard";
 import HomeHeader from "./HomeHeader";
 
 function PlantList() { 
 
-  function renderPlantItem(itemData) {
+  function renderPlantCard(itemData) {
 
     const plant = itemData.item
-    const plantItemProps = {
+    const plantCardProps = {
       id: plant.id,
       name: plant.name,
       image: plant.image,
@@ -18,7 +18,7 @@ function PlantList() {
       waterInstructions: plant.waterInstructions
     }
 
-    return <PlantItem {...plantItemProps} />;
+    return <PlantCard {...plantCardProps} />;
     
   }
 
@@ -27,12 +27,10 @@ function PlantList() {
       <FlatList 
         data={PLANTS}
         keyExtractor={(plant) => plant.id}
-        renderItem={renderPlantItem}
+        renderItem={renderPlantCard}
         numColumns={2}
         columnWrapperStyle={{justifyContent: 'space-evenly'}}
-        // to do: create header and footer component
         ListHeaderComponent={<HomeHeader />}
-
       />
     </View>
   )

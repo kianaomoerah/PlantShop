@@ -1,14 +1,13 @@
-import { Pressable, View, Image, Text, StyleSheet,  } from 'react-native';
+import { Pressable, View, Image, Text, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { CartContext } from '../store/cart-context';
 import { useContext } from 'react';
 import IconButton from './IconButton';
 import COLORS from '../constants/colors';
 
-function PlantItem({id, name, image, price }) {
+function PlantCard({id, name, image, price }) {
 
   const cart = useContext(CartContext);
-  // console.log(cart.items)
   const navigation = useNavigation();
 
   function plantDetailHandler() {
@@ -18,26 +17,25 @@ function PlantItem({id, name, image, price }) {
   }
 
   return (
-      <Pressable
-        android_ripple={{ color: '#CCC'}}
-        style={({pressed}) => pressed ? styles.pressed : null}
-        onPress={plantDetailHandler}
-      >
-        <View style={styles.plantCard}>
-          <View style={styles.imageContainer}>
-            <Image source={image} style={styles.image}/>
-          </View>
-          <Text style={styles.name}>{name}</Text>
-          <View style={styles.innerContainer}>
-            <Text style={styles.price}>$ {price}.00</Text>
-            <IconButton 
-              onPress={() => cart.addItem(id, name, image, price)}
-              icon={'add-circle'}
-              // todo: why isn't bags plus working?
-            />
-          </View>
+    <Pressable
+      android_ripple={{ color: '#CCC'}}
+      style={({pressed}) => pressed ? styles.pressed : null}
+      onPress={plantDetailHandler}
+    >
+      <View style={styles.plantCard}>
+        <View style={styles.imageContainer}>
+          <Image source={image} style={styles.image}/>
         </View>
-      </Pressable> 
+        <Text style={styles.name}>{name}</Text>
+        <View style={styles.innerContainer}>
+          <Text style={styles.price}>$ {price}.00</Text>
+          <IconButton 
+            onPress={() => cart.addItem(id, name, image, price)}
+            icon={'add-circle'} 
+          />
+        </View>
+      </View>
+    </Pressable> 
   )
 }
 
@@ -81,4 +79,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default PlantItem;
+export default PlantCard;
