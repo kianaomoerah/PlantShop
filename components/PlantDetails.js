@@ -14,26 +14,26 @@ function PlantDetails({selectedPlant}) {
         <Image source={selectedPlant.image} style={styles.image}/>
       </View>
       <View style={styles.detailsContainer}>
-      <View style={styles.costContainer}>
-        <Text style={styles.name}>{selectedPlant.name}</Text>
-        <View style={styles.priceContainer}>
-          <Text style={styles.price}>$ {selectedPlant.price}.00</Text>
-        </View>
-      </View>
-      <View style={styles.bioContainer}>
-        <Text style={styles.about}>About</Text>
-        <Text style={styles.bio}>{selectedPlant.bio}</Text>
-      </View>
-      <View>
-        <View style={styles.careContainer}>
-          <View style={styles.careInstruction}>
-            <Text style={styles.careText}>☀️ {selectedPlant.sunInstructions}</Text>
-          </View>
-          <View style={styles.careInstruction}>
-            <Text style={styles.careText}>💧 {selectedPlant.waterInstructions}</Text>
+        <View style={styles.costContainer}>
+          <Text style={styles.name}>{selectedPlant.name}</Text>
+          <View style={styles.priceContainer}>
+            <Text style={styles.price}>$ {selectedPlant.price}.00</Text>
           </View>
         </View>
-      </View>
+        <View style={styles.bioContainer}>
+          <Text style={styles.about}>About</Text>
+          <Text style={styles.bio}>{selectedPlant.bio}</Text>
+        </View>
+        <View>
+          <View style={styles.careContainer}>
+            <View style={styles.careInstruction}>
+              <Text style={styles.careText}>☀️ {selectedPlant.sunInstructions}</Text>
+            </View>
+            <View style={styles.careInstruction}>
+              <Text style={styles.careText}>💧 {selectedPlant.waterInstructions}</Text>
+            </View>
+          </View>
+        </View>
       {/* todo: simplify the object information passing */}
       <Button 
       onPress={() => cart.addItem(selectedPlant.id,selectedPlant.name, selectedPlant.image, selectedPlant.price)} 
@@ -61,11 +61,11 @@ const styles = StyleSheet.create({
   },
   image: {
     resizeMode: 'contain',
-    height: 350,
+    height: '100%',
     width: '100%'
   },
   detailsContainer: {
-    flex: 0.55,
+    flex: 0.6,
     backgroundColor: COLORS.lightBeige,
     borderRadius: 20,
     paddingBottom: 35,

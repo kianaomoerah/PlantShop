@@ -52,7 +52,6 @@ function Cart() {
           <Text style={styles.totalText}>Items Total: {cart.getQuantityTotal()}</Text>
         </View>
         <Button 
-        style={styles.button}
         primaryColor={COLORS.lightBeige} 
         secondaryColor={COLORS.lightGreen}
         alignment={'center'}

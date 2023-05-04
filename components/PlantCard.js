@@ -18,7 +18,7 @@ function PlantCard({id, name, image, price }) {
 
   return (
     <Pressable
-      android_ripple={{ color: '#CCC'}}
+      android_ripple={{ color: COLORS.lightBeige}}
       style={({pressed}) => pressed ? styles.pressed : null}
       onPress={plantDetailHandler}
     >
