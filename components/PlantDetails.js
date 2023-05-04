@@ -35,7 +35,11 @@ function PlantDetails({selectedPlant}) {
         </View>
       </View>
       {/* todo: simplify the object information passing */}
-      <Button onPress={() => cart.addItem(selectedPlant.id,selectedPlant.name, selectedPlant.image, selectedPlant.price)} color={COLORS.white} alignment={'center'}>Add to Cart</Button>
+      <Button 
+      onPress={() => cart.addItem(selectedPlant.id,selectedPlant.name, selectedPlant.image, selectedPlant.price)} 
+      primaryColor={COLORS.white}
+      secondaryColor={COLORS.lightGreen}
+      alignment={'center'}>Add to Cart</Button>
       </View>
     </View>
   )
