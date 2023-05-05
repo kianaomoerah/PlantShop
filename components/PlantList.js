@@ -1,7 +1,8 @@
-import { PLANTS } from "../data/plant-data";
-import { View, FlatList } from "react-native";
-import PlantCard from "./PlantCard";
-import HomeHeader from "./HomeHeader";
+import { SafeAreaView, FlatList, StyleSheet, Platform } from 'react-native';
+import { PLANTS } from '../data/plant-data';
+import PlantCard from './PlantCard';
+import HomeHeader from './HomeHeader';
+import COLORS from '../constants/colors';
 
 function PlantList() { 
 
@@ -23,7 +24,7 @@ function PlantList() {
   }
 
   return (
-    <View>
+    <SafeAreaView style={styles.plantlist}>
       <FlatList 
         data={PLANTS}
         keyExtractor={(plant) => plant.id}
@@ -32,8 +33,15 @@ function PlantList() {
         columnWrapperStyle={{justifyContent: 'space-evenly'}}
         ListHeaderComponent={<HomeHeader />}
       />
-    </View>
+    </SafeAreaView>
   )
 }
 
 export default PlantList;
+
+styles = StyleSheet.create({
+  plantlist: {
+    backgroundColor: COLORS.white,
+    paddingTop: Platform.OS === 'android' && 40
+  }
+})
