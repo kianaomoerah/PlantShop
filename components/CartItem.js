@@ -55,10 +55,10 @@ const styles = StyleSheet.create({
     resizeMode: 'contain'
   },
   nameContainer: {
-    flex: 0.3
+    flex: 0.2
   },
   quantityContainer: {
-    flex: 0.35,
+    flex: 0.25,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center'
