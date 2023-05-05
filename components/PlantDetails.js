@@ -4,12 +4,11 @@ import { useContext } from 'react';
 import Button from '../components/Button';
 import COLORS from '../constants/colors';
 
-function PlantDetails({selectedPlant}) {
-
+function PlantDetails({ selectedPlant }) {
   const cart = useContext(CartContext);
 
   return (
-    <View style={styles.container} contentContainerStyle={{ justifyContent: 'space-between'}}>
+    <View style={styles.container} contentContainerStyle={{justifyContent: 'space-between'}}>
       <View style={styles.imageContainer}>
         <Image source={selectedPlant.image} style={styles.image}/>
       </View>
@@ -24,17 +23,14 @@ function PlantDetails({selectedPlant}) {
           <Text style={styles.about}>About</Text>
           <Text style={styles.bio}>{selectedPlant.bio}</Text>
         </View>
-        <View>
-          <View style={styles.careContainer}>
-            <View style={styles.careInstruction}>
-              <Text style={styles.careText}>☀️ {selectedPlant.sunInstructions}</Text>
-            </View>
-            <View style={styles.careInstruction}>
-              <Text style={styles.careText}>💧 {selectedPlant.waterInstructions}</Text>
-            </View>
+        <View style={styles.careContainer}>
+          <View style={styles.careInstruction}>
+            <Text style={styles.careText}>☀️ {selectedPlant.sunInstructions}</Text>
+          </View>
+          <View style={styles.careInstruction}>
+            <Text style={styles.careText}>💧 {selectedPlant.waterInstructions}</Text>
           </View>
         </View>
-      {/* todo: simplify the object information passing */}
       <Button 
       onPress={() => cart.addItem(selectedPlant.id,selectedPlant.name, selectedPlant.image, selectedPlant.price)} 
       primaryColor={COLORS.white}
@@ -128,4 +124,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
   }
-})
+});

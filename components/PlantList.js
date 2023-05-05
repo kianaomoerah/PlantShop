@@ -7,7 +7,6 @@ import COLORS from '../constants/colors';
 function PlantList() { 
 
   function renderPlantCard(itemData) {
-
     const plant = itemData.item
     const plantCardProps = {
       id: plant.id,
@@ -44,4 +43,4 @@ styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     paddingTop: Platform.OS === 'android' && 40
   }
-})
+});

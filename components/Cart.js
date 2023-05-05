@@ -1,19 +1,16 @@
 import { View, Text, FlatList, StyleSheet, SafeAreaView, Alert} from 'react-native';
-import Button from '../components/Button';
 import { CartContext } from '../store/cart-context';
 import { useContext } from 'react';
-import COLORS from '../constants/colors'
 import CartItem from './CartItem';
-
+import Button from '../components/Button';
+import COLORS from '../constants/colors';
 
 function Cart() {
-
   const cart = useContext(CartContext);
-  const cartItems = cart.items 
+  const cartItems = cart.items; 
 
   function renderCartItem(itemData) {
-
-    const cartItem = itemData.item
+    const cartItem = itemData.item;
     const cartItemProps = {
       id: cartItem.id,
       name: cartItem.name,
@@ -27,9 +24,8 @@ function Cart() {
 
   function completeOrder() {
     cart.clearCart();
-    return Alert.alert('Your order has been submitted!')
+    return Alert.alert('Your order has been submitted!');
   }
-
 
   if (cartItems.length === 0) {
     return (
@@ -95,4 +91,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18
   }
-})
+});

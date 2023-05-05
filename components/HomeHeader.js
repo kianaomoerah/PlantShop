@@ -3,7 +3,7 @@ import COLORS from '../constants/colors';
 
 function HomeHeader() {
   return (
-    <View style={styles.headerContainer}>
+    <View>
       <ImageBackground 
       source={require('../assets/photos/monstera-banner.png')}
       style={styles.banner}
@@ -23,9 +23,6 @@ function HomeHeader() {
 export default HomeHeader;
 
 const styles = StyleSheet.create({
-  headerContainer: {
-    // minHeight: '5%',
-  },
   title: {
     fontSize: 32,
     color: COLORS.darkGreen,
@@ -38,6 +35,11 @@ const styles = StyleSheet.create({
   italic: {
     fontStyle: 'italic'
   },
+  bannerTextContainer: {
+    backgroundColor: COLORS.white,
+    paddingHorizontal: 15,
+    paddingVertical: 25,
+  },  
   banner: {
     resizeMode: 'cover',
     height: 200,
@@ -47,11 +49,6 @@ const styles = StyleSheet.create({
   bannerText: {
     fontWeight: 'bold',
     textAlign: 'center'
-  },
-  bannerTextContainer: {
-    backgroundColor: COLORS.white,
-    paddingHorizontal: 15,
-    paddingVertical: 25,
   },
   about: {
     borderColor: COLORS.darkGreen,
@@ -65,7 +62,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
     lineHeight: 22
-  },
-})
-
-// todo: update to fontsizes to rem?
+  }
+});

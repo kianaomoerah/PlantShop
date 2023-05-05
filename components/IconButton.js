@@ -2,7 +2,7 @@ import { Pressable, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import COLORS from '../constants/colors';
 
-function IconButton({onPress, icon, color=COLORS.lightGreen, size=28}) {
+function IconButton({ onPress, icon, color=COLORS.lightGreen, size=28 }) {
   return (
     <Pressable
       onPress={onPress}
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
   pressed: {
     opacity: 0.7
   }
-})
+});

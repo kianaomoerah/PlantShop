@@ -1,11 +1,10 @@
-import { View, Image, Text, StyleSheet,  } from 'react-native';
+import { View, Image, Text, StyleSheet } from 'react-native';
 import { CartContext } from '../store/cart-context';
 import { useContext } from 'react';
 import IconButton from './IconButton';
 import COLORS from '../constants/colors';
 
-function CartItem({id, name, image, price, quantity}) {
-
+function CartItem({ id, name, image, price, quantity }) {
   const cart = useContext(CartContext);
 
   return (
@@ -64,4 +63,4 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center'
   }
-})
+});

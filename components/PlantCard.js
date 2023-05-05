@@ -5,8 +5,7 @@ import { useContext } from 'react';
 import IconButton from './IconButton';
 import COLORS from '../constants/colors';
 
-function PlantCard({id, name, image, price }) {
-
+function PlantCard({ id, name, image, price }) {
   const cart = useContext(CartContext);
   const navigation = useNavigation();
 
@@ -18,7 +17,7 @@ function PlantCard({id, name, image, price }) {
 
   return (
     <Pressable
-      android_ripple={{ color: COLORS.lightBeige}}
+      android_ripple={{color: COLORS.lightBeige}}
       style={({pressed}) => pressed ? styles.pressed : null}
       onPress={plantDetailHandler}
     >
@@ -38,6 +37,8 @@ function PlantCard({id, name, image, price }) {
     </Pressable> 
   )
 }
+
+export default PlantCard;
 
 const styles = StyleSheet.create({
   plantCard: {
@@ -77,6 +78,4 @@ const styles = StyleSheet.create({
   pressed: {
     opacity: 0.5
   }
-})
-
-export default PlantCard;
+});

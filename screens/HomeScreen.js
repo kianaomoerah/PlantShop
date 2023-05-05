@@ -4,4 +4,4 @@ function HomeScreen() {
   return <PlantList />
 }
 
-export default HomeScreen
+export default HomeScreen;

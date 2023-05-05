@@ -1,4 +1,4 @@
-import Plant from './model'
+import Plant from './model';
 
 export const PLANTS = [
   new Plant(
@@ -120,4 +120,4 @@ export const PLANTS = [
     'indirect light',
     'every 1 - 2 weeks'
   )
-]
+];
