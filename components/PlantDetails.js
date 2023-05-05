@@ -1,11 +1,21 @@
 import { Image, View, Text, StyleSheet } from 'react-native';
 import { CartContext } from '../store/cart-context';
 import { useContext } from 'react';
+import { showMessage } from 'react-native-flash-message';
 import Button from '../components/Button';
 import COLORS from '../constants/colors';
 
 function PlantDetails({ selectedPlant }) {
   const cart = useContext(CartContext);
+
+  function addedToCart() {
+    cart.addItem(selectedPlant.id,selectedPlant.name, selectedPlant.image, selectedPlant.price)
+    showMessage({
+      message: `${selectedPlant.name} has been added to your cart!`,
+      backgroundColor: COLORS.lightGreen,
+      color: COLORS.white,
+    })
+  }
 
   return (
     <View style={styles.container} contentContainerStyle={{justifyContent: 'space-between'}}>
@@ -32,7 +42,7 @@ function PlantDetails({ selectedPlant }) {
           </View>
         </View>
       <Button 
-      onPress={() => cart.addItem(selectedPlant.id,selectedPlant.name, selectedPlant.image, selectedPlant.price)} 
+      onPress={() => {addedToCart()}} 
       primaryColor={COLORS.white}
       secondaryColor={COLORS.lightGreen}
       alignment={'center'}>Add to Cart</Button>

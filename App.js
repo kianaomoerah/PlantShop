@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import FlashMessage from 'react-native-flash-message';
 import CartProvider from './store/cart-context';
 import { CartContext } from './store/cart-context';
 import { useContext } from 'react';
@@ -16,7 +17,6 @@ const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
 function AppOverview() {
-
   const cart = useContext(CartContext)
   const cartQuantity = cart.getQuantityTotal()
   
@@ -54,7 +54,6 @@ function AppOverview() {
 export default function App() {
 
   return (
-
     <CartProvider>
       <NavigationContainer>
         <StatusBar style="auto" />
@@ -93,8 +92,8 @@ export default function App() {
           }}
           />
         </Stack.Navigator>
+        <FlashMessage position={ Platform.OS === 'ios' ? 'top' : {top:100}}/>
       </NavigationContainer>
     </CartProvider>
-
-  );
+  )
 }
