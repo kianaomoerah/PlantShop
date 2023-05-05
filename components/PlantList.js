@@ -2,6 +2,7 @@ import { SafeAreaView, FlatList, StyleSheet, Platform } from 'react-native';
 import { PLANTS } from '../data/plant-data';
 import PlantCard from './PlantCard';
 import HomeHeader from './HomeHeader';
+import Footer from './Footer';
 import COLORS from '../constants/colors';
 
 function PlantList() { 
@@ -31,6 +32,7 @@ function PlantList() {
         numColumns={2}
         columnWrapperStyle={{justifyContent: 'space-evenly'}}
         ListHeaderComponent={<HomeHeader />}
+        ListFooterComponent={<Footer />}
       />
     </SafeAreaView>
   )
