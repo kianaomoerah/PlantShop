@@ -26,7 +26,11 @@ function PlantList() {
   return (
     <SafeAreaView style={styles.plantlist}>
       <FlatList 
-        data={PLANTS}
+        data={
+          // if statement, if state of pet friendly is true the data to be returned should be a filtered array
+          // otherwise it is just plants
+          PLANTS
+        }
         keyExtractor={(plant) => plant.id}
         renderItem={renderPlantCard}
         numColumns={2}
@@ -46,3 +50,8 @@ styles = StyleSheet.create({
     paddingTop: Platform.OS === 'android' && 40
   }
 });
+
+// provide a checkbox for users 
+// if selected the petfriendly use state is set to true 
+// if true, using useEffect we can call a filter function that returns a new array with the plants that have the petfriendly true prop 
+// if pet friendly is true, instead of passing the flat list data the PLANTS array we will pass it our filtered array to display

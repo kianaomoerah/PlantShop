@@ -1,4 +1,5 @@
 import { View, ImageBackground, Text, StyleSheet } from 'react-native';
+import CheckBox from './CheckBox';
 import COLORS from '../constants/colors';
 
 function HomeHeader() {
@@ -16,6 +17,7 @@ function HomeHeader() {
       <View style={styles.about}>
         <Text style={styles.aboutText}>Whether it's your 1st, 2nd, 3rd or 4th attempt at keeping a plant friend happy we're here to help! Our plant collection is curated to showcase beautiful plants with easy care needs.</Text>
       </View>
+      <CheckBox style={styles.checkbox}/>
     </View>
   )
 }
