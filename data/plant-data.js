@@ -18,7 +18,8 @@ export const PLANTS = [
     10,
     'The String of Hearts trailing vine is perfect for planting inhanging baskets or in pots on shelves or window sills.',
     'medium to bright indirect light',
-    'every 1 - 2 weeks'
+    'every 1 - 2 weeks',
+    true
   ),
 
   new Plant(
@@ -48,7 +49,8 @@ export const PLANTS = [
     20,
     'With foliage that appears painted with the colours of the Brazilian flag, and some seriously low-maintenace vibes, this is a great houseplant for even the most novice of plant parents. ',
     'bright direct light',
-    'every 3 - 5 days'
+    'every 3 - 5 days',
+    true
   ),
 
   new Plant(
@@ -98,7 +100,8 @@ export const PLANTS = [
     20,
     'Named for it\'s raindrop-shaped glossy green leaves, an easy-to-care-for houseplant that is a delightful staple to add to your collection.',
     'indirect light',
-    'every 1 - 2 weeks'
+    'every 1 - 2 weeks',
+    true
   ),
 
   new Plant(
@@ -118,6 +121,7 @@ export const PLANTS = [
     10,
     'The spider plant is incredibly easy to care for and to propagate. Quite adaptable, this plant will grow in a wide range of conditions and suffers from very few problems.',
     'indirect light',
-    'every 1 - 2 weeks'
+    'every 1 - 2 weeks',
+    true
   )
 ];

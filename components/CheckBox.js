@@ -1,25 +1,27 @@
-import { useState } from 'react';
-import Checkbox from 'expo-checkbox';
 import { Text, StyleSheet, View } from 'react-native';
+import Checkbox from 'expo-checkbox';
+import { CartContext } from '../store/cart-context';
+import { useContext } from 'react';
+import COLORS from '../constants/colors';
 
 function CheckBox() {
-
-  const [petFriendly, setPetFriendly] = useState(false);
-
+  const context = useContext(CartContext);
+  const petFilter = context.petFriendly;
+  const petFilterHandler = context.setPetFriendly;
+  
   return (
     <View style={styles.checkboxContainer}>
       <View style={styles.checkbox}>
+        <Text style={styles.label}>Show pet-friendly plants only:</Text>
         <Checkbox
-          value={petFriendly}
-          onValueChange={setPetFriendly}
+          value={petFilter}
+          onValueChange={petFilterHandler}
+          color={COLORS.darkGreen}
           style={styles.checkbox}
         />
-        <Text style={styles.label}>Looking for pet friendly plant options?</Text>
       </View>
-      {/* <Text>Is CheckBox selected: {petFriendly ? '👍' : '👎'}</Text> */}
     </View>
   )
-
 }
 
 export default CheckBox;
@@ -27,15 +29,14 @@ export default CheckBox;
 const styles = StyleSheet.create({
   checkboxContainer:{
     alignItems: 'center',
-    marginBottom: 15
+    marginBottom: 20
   },
   checkbox: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   label: {
-    fontSize: {
-      fontSize: 16
-    }
+    marginRight: 5,
+    fontSize: 20
   }
-})
+});

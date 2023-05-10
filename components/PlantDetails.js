@@ -2,6 +2,7 @@ import { Image, View, Text, StyleSheet } from 'react-native';
 import { CartContext } from '../store/cart-context';
 import { useContext } from 'react';
 import { showMessage } from 'react-native-flash-message';
+import { Ionicons } from '@expo/vector-icons';
 import Button from '../components/Button';
 import COLORS from '../constants/colors';
 
@@ -39,6 +40,9 @@ function PlantDetails({ selectedPlant }) {
           </View>
           <View style={styles.careInstruction}>
             <Text style={styles.careText}>💧 {selectedPlant.waterInstructions}</Text>
+          </View>
+          <View style={styles.careInstruction}>
+            <Text style={styles.careText}><Ionicons name="paw" size="20"/> {selectedPlant.petFriendly ? 'pet friendly' : 'not recommended for pets'}</Text>
           </View>
         </View>
       <Button 

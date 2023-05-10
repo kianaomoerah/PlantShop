@@ -6,7 +6,8 @@ class Plant {
     price,
     bio,
     sunInstructions,
-    waterInstructions
+    waterInstructions,
+    petFriendly = false
   ) {
     this.id = id;
     this.name = name;
@@ -15,6 +16,7 @@ class Plant {
     this.bio = bio;
     this.sunInstructions = sunInstructions;
     this.waterInstructions = waterInstructions;
+    this.petFriendly = petFriendly;
   }
 }
 

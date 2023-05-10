@@ -1,4 +1,6 @@
 import { SafeAreaView, FlatList, StyleSheet, Platform } from 'react-native';
+import { CartContext } from '../store/cart-context';
+import { useContext } from 'react';
 import { PLANTS } from '../data/plant-data';
 import PlantCard from './PlantCard';
 import HomeHeader from './HomeHeader';
@@ -6,6 +8,15 @@ import Footer from './Footer';
 import COLORS from '../constants/colors';
 
 function PlantList() { 
+  const context = useContext(CartContext);
+  const petFilter = context.petFriendly;
+  let plantData = [];
+
+  if (petFilter) {
+    plantData = PLANTS.filter(plant => plant.petFriendly);
+  } else {
+    plantData = PLANTS;
+  }
 
   function renderPlantCard(itemData) {
     const plant = itemData.item
@@ -16,7 +27,8 @@ function PlantList() {
       price: plant.price,
       bio: plant.bio,
       sunInstructions: plant.sunInstructions,
-      waterInstructions: plant.waterInstructions
+      waterInstructions: plant.waterInstructions,
+      petFriendly: plant.petFriendly
     }
 
     return <PlantCard {...plantCardProps} />;
@@ -26,11 +38,7 @@ function PlantList() {
   return (
     <SafeAreaView style={styles.plantlist}>
       <FlatList 
-        data={
-          // if statement, if state of pet friendly is true the data to be returned should be a filtered array
-          // otherwise it is just plants
-          PLANTS
-        }
+        data={plantData}
         keyExtractor={(plant) => plant.id}
         renderItem={renderPlantCard}
         numColumns={2}
@@ -50,8 +58,3 @@ styles = StyleSheet.create({
     paddingTop: Platform.OS === 'android' && 40
   }
 });
-
-// provide a checkbox for users 
-// if selected the petfriendly use state is set to true 
-// if true, using useEffect we can call a filter function that returns a new array with the plants that have the petfriendly true prop 
-// if pet friendly is true, instead of passing the flat list data the PLANTS array we will pass it our filtered array to display
