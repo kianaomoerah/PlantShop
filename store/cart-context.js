@@ -13,6 +13,7 @@ export const CartContext = createContext({
 
 export function CartProvider({children}) {
   const [ cartProducts, setCartProducts ] = useState([]);
+  const [petFriendly, setPetFriendly] = useState(false);
 
   function getProductQuantity(id) {
     const quantity = cartProducts.find(product => product.id === id)?.quantity;
@@ -92,6 +93,8 @@ export function CartProvider({children}) {
 
   const contextValue = {
     items: cartProducts,
+    petFriendly,
+    setPetFriendly,
     getProductQuantity,
     addItem,
     removeItem,
