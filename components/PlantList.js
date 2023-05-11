@@ -42,7 +42,7 @@ function PlantList() {
         keyExtractor={(plant) => plant.id}
         renderItem={renderPlantCard}
         numColumns={2}
-        columnWrapperStyle={{justifyContent: 'space-evenly'}}
+        columnWrapperStyle={{justifyContent: 'center'}}
         ListHeaderComponent={<HomeHeader />}
         ListFooterComponent={<Footer />}
       />

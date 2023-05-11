@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
   plantCard: {
     width: 150,
     height: 250,
-    marginBottom: 20,
+    marginVertical: 15,
+    marginHorizontal: 18,
     borderRadius: 10,
     backgroundColor: COLORS.lightBeige
   },
