@@ -11,15 +11,13 @@ function CheckBox() {
   
   return (
     <View style={styles.checkboxContainer}>
-      <View style={styles.checkbox}>
-        <Text style={styles.label}>Show pet-friendly plants only:</Text>
-        <Checkbox
-          value={petFilter}
-          onValueChange={petFilterHandler}
-          color={COLORS.darkGreen}
-          style={styles.checkbox}
-        />
-      </View>
+      <Text style={styles.label}>Show pet-friendly plants only:</Text>
+      <Checkbox
+        value={petFilter}
+        onValueChange={petFilterHandler}
+        color={COLORS.darkGreen}
+        style={styles.checkbox}
+      />
     </View>
   )
 }
@@ -27,16 +25,16 @@ function CheckBox() {
 export default CheckBox;
 
 const styles = StyleSheet.create({
-  checkboxContainer:{
+  checkboxContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20
   },
   checkbox: {
-    flexDirection: 'row',
-    justifyContent: 'space-between'
+    marginLeft: 10
   },
   label: {
-    marginRight: 5,
     fontSize: 20
   }
 });
