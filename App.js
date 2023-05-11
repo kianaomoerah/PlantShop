@@ -73,8 +73,7 @@ export default function App() {
           name="AppOverview" 
           component={AppOverview}
           options={{
-            headerShown: false,
-            contentStyle: { backgroundColor: '#fff'}
+            headerShown: false
           }}
           />
           <Stack.Screen 
