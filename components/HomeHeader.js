@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     marginBottom: 5
   },
   subTitle: {
-    fontSize: 18,
+    fontSize: 20,
     color: COLORS.darkBeige
   },
   italic: {
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   aboutText: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 20,
     lineHeight: 22
   }
 });
