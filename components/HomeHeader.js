@@ -14,6 +14,9 @@ function HomeHeader() {
           <Text style={[styles.subTitle, styles.bannerText]}>Easy-to-care for plants {'\n'} you're <Text style={styles.italic}>unlikely</Text> to kill</Text>
         </View>
       </ImageBackground>
+      <View style={styles.copyright}>
+        <Text style={styles.copyrightText}>Copyright &copy; 2023 | Created by Kiana Omoerah</Text>
+      </View>
       <View style={styles.about}>
         <Text style={styles.aboutText}>Whether it's your 1st, 2nd, 3rd or 4th attempt at keeping a plant friend happy we're here to help! Our plant collection is curated to showcase beautiful plants with easy care needs.</Text>
       </View>
@@ -52,6 +55,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center'
   },
+  copyright: {
+    backgroundColor: COLORS.lightBeige,
+    paddingVertical: 7
+  },
+  copyrightText: {
+    fontSize: 16,
+    textAlign: 'center',
+    fontWeight: 'bold'
+  },  
   about: {
     borderColor: COLORS.darkGreen,
     borderWidth: 1.5,

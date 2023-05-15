@@ -4,7 +4,6 @@ import { useContext } from 'react';
 import { PLANTS } from '../data/plant-data';
 import PlantCard from './PlantCard';
 import HomeHeader from './HomeHeader';
-import Footer from './Footer';
 import COLORS from '../constants/colors';
 
 function PlantList() { 
@@ -44,7 +43,6 @@ function PlantList() {
         numColumns={2}
         columnWrapperStyle={{justifyContent: 'center'}}
         ListHeaderComponent={<HomeHeader />}
-        ListFooterComponent={<Footer />}
       />
     </SafeAreaView>
   )
