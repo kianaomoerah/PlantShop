@@ -18,7 +18,7 @@ function HomeHeader() {
         <Text style={styles.copyrightText}>Copyright &copy; 2023 | Created by Kiana Omoerah</Text>
       </View>
       <View style={styles.about}>
-        <Text style={styles.aboutText}>Whether it's your 1st, 2nd, 3rd or 4th attempt at keeping a plant friend happy we're here to help! Our plant collection is curated to showcase beautiful plants with easy care needs.</Text>
+        <Text style={styles.aboutText}>Our plant collection is curated to showcase beautiful plants with easy care needs. Perfect for new plant parents, or those looking to give houseplants another try.</Text>
       </View>
       <CheckBox style={styles.checkbox}/>
     </View>
