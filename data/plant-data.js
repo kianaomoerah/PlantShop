@@ -6,7 +6,7 @@ export const PLANTS = [
     'Snake Plant',
     require('../assets/photos/snake-plant.png'),
     30,
-    'The Snake plant will put up with quite a high level of neglect and a wide spectrum of care, making it a great starter plant.',
+    'The Snake plant will put up with quite a high level of neglect and a wide spectrum of care making it a great starter plant.',
     'bright direct light to moderate shade',
     '2 - 4 weeks'
   ),
@@ -16,7 +16,7 @@ export const PLANTS = [
     'String of Hearts',
     require('../assets/photos/string-of-hearts.png'),
     10,
-    'The String of Hearts trailing vine is perfect for planting inhanging baskets or in pots on shelves or window sills.',
+    'The String of Hearts trailing vine is perfect for planting in hanging baskets or in pots on shelves or window sills.',
     'medium to bright indirect light',
     'every 1 - 2 weeks',
     true
@@ -37,7 +37,7 @@ export const PLANTS = [
     'Heartleaf Brasil',
     require('../assets/photos/heartleaf-brasil.png'),
     20,
-    'With foliage that appears painted with the colours of the Brazilian flag, and some seriously low-maintenace vibes, this is a great houseplant for even the most novice of plant parents.',
+    'The Heartleaf Brasil is a great low-maintenace option and with stunning coloured leaves this is a great pick.',
     'bright indirect light',
     'every 1 - 2 weeks'
   ),
@@ -47,7 +47,7 @@ export const PLANTS = [
     'Banana Tree',
     require('../assets/photos/banana-plant.png'),
     20,
-    'With foliage that appears painted with the colours of the Brazilian flag, and some seriously low-maintenace vibes, this is a great houseplant for even the most novice of plant parents. ',
+    'While the Banana tree will rarely bear fruit, their stunningly large, velvety leaves make them a great addition to any home.',
     'bright direct light',
     'every 3 - 5 days',
     true
@@ -68,7 +68,7 @@ export const PLANTS = [
     'ZZ Plant',
     require('../assets/photos/zz-plant.png'),
     20,
-    'Not only is this plant an effective air cleaner, it is also quite probably the hardest indoor plant to kill. An excellent choice for new plant parents.',
+    'Not only is this plant an effective air cleaner, it\'s probably the hardest indoor plant to kill. An excellent choice for new plant parents.',
     'indirect light',
     'every 2 - 4 weeks'
   ),
@@ -88,7 +88,7 @@ export const PLANTS = [
     'Bird of Paradise',
     require('../assets/photos/bird-of-paradise.png'),
     30,
-    'This delightfully easy-care plant has large, upright, paddle-shaped leaves, from which can protrude the orange, red and blue flowers that lend this plant it\s name.',
+    'This delightfully easy-care plant has large, upright, paddle-shaped leaves, from which can protrude the orange, red and blue flowers that lend this plant it\'s name.',
     'bright direct light',
     'every 5 - 7 days'
   ),

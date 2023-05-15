@@ -42,14 +42,15 @@ function PlantDetails({ selectedPlant }) {
             <Text style={styles.careText}>💧 {selectedPlant.waterInstructions}</Text>
           </View>
           <View style={styles.careInstruction}>
-            <Text style={styles.careText}><Ionicons name="paw" size="20"/> {selectedPlant.petFriendly ? 'pet friendly' : 'not recommended for pets'}</Text>
+            <Text style={styles.careText}><Ionicons name="paw" size={20} /> {selectedPlant.petFriendly ? 'pet friendly' : 'not recommended for pets'}</Text>
           </View>
         </View>
-      <Button 
-      onPress={() => {addedToCart()}} 
-      primaryColor={COLORS.white}
-      secondaryColor={COLORS.lightGreen}
-      alignment={'center'}>Add to Cart</Button>
+        <Button
+        style={{flex: 0.3}}
+        onPress={() => {addedToCart()}} 
+        primaryColor={COLORS.white}
+        secondaryColor={COLORS.lightGreen}
+        alignment={'center'}>Add to Cart</Button>
       </View>
     </View>
   )
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   imageContainer: {
-    flex: 0.5,
+    flex: 0.4,
     marginTop: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -78,10 +79,10 @@ const styles = StyleSheet.create({
     flex: 0.6,
     backgroundColor: COLORS.lightBeige,
     borderRadius: 20,
-    paddingBottom: 35,
     paddingTop: 5,
   },
   costContainer: {
+    flex: 0.1,
     marginLeft: 20,
     marginTop: 20,
     flexDirection: 'row',
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   name: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: 'bold'
   },
   priceContainer: {
@@ -107,6 +108,7 @@ const styles = StyleSheet.create({
     fontSize: 16
   },
   bioContainer: {
+    flex: 0.35,
     paddingHorizontal: 20,
     marginTop: 10
   },
@@ -116,15 +118,15 @@ const styles = StyleSheet.create({
   },
   bio: {
     color: COLORS.black,
-    fontSize: 16,
+    fontSize: 18,
     lineHeight: 22,
-    marginTop: 10
+    marginTop: 15
   },
   careContainer: {
-    paddingHorizontal: 20,
-    marginTop: 20,
-    marginBottom: 15,
+    flex: 0.5,
+    marginHorizontal: 10,
     alignItems: 'flex-start',
+    justifyContent: 'center'
   },
   careInstruction: {
     backgroundColor: COLORS.darkGreen,
