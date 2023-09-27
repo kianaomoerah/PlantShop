@@ -52,7 +52,6 @@ export default PlantList;
 
 styles = StyleSheet.create({
   plantlist: {
-    backgroundColor: COLORS.white,
-    paddingTop: Platform.OS === 'android' && 40
+    backgroundColor: COLORS.white
   }
 });
