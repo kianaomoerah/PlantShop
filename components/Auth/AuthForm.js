@@ -73,10 +73,7 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }) {
         {!isLogin && (
           <Input
             label="Confirm Password"
-            onUpdateValue={updateInputValueHandler.bind(
-              this,
-              'confirmPassword'
-            )}
+            onUpdateValue={updateInputValueHandler.bind(this, 'confirmPassword')}
             secure
             value={enteredConfirmPassword}
             isInvalid={passwordsDontMatch}
