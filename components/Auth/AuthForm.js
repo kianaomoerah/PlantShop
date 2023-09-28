@@ -70,6 +70,7 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }) {
           value={enteredPassword}
           isInvalid={passwordIsInvalid}
         />
+        { !isLogin && <Text style={styles.instructionText}>Password must be at least 6 characters long</Text> }
         {!isLogin && (
           <Input
             label="Confirm Password"
@@ -100,5 +101,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 18,
     marginBottom: 5
+  },
+  instructionText: {
+    fontStyle: "italic"
   }
 });
