@@ -56,7 +56,7 @@ function AuthenticatedStack() {
             return (
               <View style={{paddingRight: 10}}>
               <IconButton 
-              onPress={ () => {authContext.logout}}
+              onPress={ () => {authContext.logout()}}
               icon={'exit'}
               color={COLORS.white}
               size={28}
