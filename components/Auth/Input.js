@@ -36,9 +36,10 @@ const styles = StyleSheet.create({
   label: {
     color: COLORS.white,
     marginBottom: 4,
+    fontWeight: 'bold'
   },
   labelInvalid: {
-    color: COLORS.error500,
+    color: COLORS.error100,
   },
   input: {
     paddingVertical: 8,
