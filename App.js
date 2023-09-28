@@ -51,16 +51,15 @@ function AuthenticatedStack() {
         name="AppOverview" 
         component={AppOverview}
         options={{
-        title: '',
-        headerRight: () => {
+          title: '',
+          headerRight: () => {
             return (
               <View style={{paddingRight: 10}}>
               <IconButton 
-              onPress={ () => {authContext.logout()}}
+              onPress={() => {authContext.logout()}}
               icon={'exit'}
               color={COLORS.white}
-              size={28}
-              style={{ width: 7.5 }}
+              size={30}
               />
               </View>
               )
@@ -69,9 +68,19 @@ function AuthenticatedStack() {
         <Stack.Screen 
         name="PlantDetails"
         component={PlantDetailScreen}
-        options={{
-          title: ''
-        }}
+        options={({ navigation }) => ({
+          title: '',
+          headerRight: () => {
+            return (
+              <IconButton 
+              onPress={ () => {navigation.navigate('Cart')}}
+              icon={'cart'}
+              color={COLORS.white}
+              size={30}
+              />
+            )
+          },
+        })}
         />
         <Stack.Screen 
         name="Cart"
